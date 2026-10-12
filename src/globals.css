@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-950: #14051f;
+  --color-primary-900: #1b0b2b;
+  --color-primary-800: #331753;
+  --color-primary-700: #3f2166;
+  --color-primary-600: #4f2d7d;
+  --color-primary-500: #624198;
+  --color-primary-400: #7e5ab5;
+
+  --color-accent-50: #f8f5fc;
+  --color-accent-100: #f1ebfa;
+  --color-accent-200: #e8dff7;
+  --color-accent-300: #d8c8f0;
+  --color-accent-400: #c0a8e4;
+  --color-accent-500: #a385d5;
+
+  --color-ink-900: #191020;
+  --color-ink-700: #332a3b;
+  --color-ink-500: #5c5264;
+  --color-ink-400: #7e7586;
+
+  --color-line: #ece6f2;
+
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope Variable", "Inter Variable", ui-sans-serif,
+    system-ui, sans-serif;
+
+  --shadow-soft: 0 1px 2px rgba(25, 16, 32, 0.04),
+    0 12px 32px -12px rgba(25, 16, 32, 0.14);
+  --shadow-lift: 0 2px 4px rgba(25, 16, 32, 0.04),
+    0 28px 60px -20px rgba(25, 16, 32, 0.22);
+
+  --radius-4xl: 2rem;
+
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-pulse-soft: pulse-soft 3.5s ease-in-out infinite;
+  --animate-rise: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--color-ink-700);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--color-accent-200);
+  color: var(--color-primary-900);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary-600);
+  outline-offset: 2px;
+  border-radius: 0.35rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
