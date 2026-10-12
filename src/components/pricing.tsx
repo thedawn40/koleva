@@ -113,20 +113,6 @@ export function Pricing() {
             </Reveal>
           ))}
         </div>
-
-        <Reveal delay={0.1}>
-          <p className="mx-auto mt-10 flex max-w-2xl items-start gap-2.5 text-center text-sm leading-relaxed text-ink-400">
-            <Info
-              className="mt-0.5 h-4 w-4 shrink-0 text-primary-500"
-              aria-hidden="true"
-            />
-            <span className="text-left">
-              Paket dan harga di atas masih berupa rencana dan dapat berubah
-              sebelum Koleva diluncurkan. Saat ini kami membuka daftar tunggu,
-              bukan pendaftaran berbayar.
-            </span>
-          </p>
-        </Reveal>
       </Container>
     </section>
   );
